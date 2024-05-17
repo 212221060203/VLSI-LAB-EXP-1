@@ -21,34 +21,6 @@ Logic Diagram :
 
 Logic Gates:
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
-
-
-Half Adder:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
-
-
-Full adder:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/9bb3964c-438f-469d-a3de-c1cca6f323fb)
-
-
-Half Subtractor:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/731470b7-eb4e-49f8-8bb7-2994052a7184)
-
-
-
-Full Subtractor:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/d66f874b-c1f2-44b3-a035-7149b56430c1)
-
-
-
-8 Bit Ripple Carry Adder
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/7385a408-40a5-4203-8050-b72818622d79)
-
 ## VERILOG CODE:
 LOGIC GATES: module logic(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate );
 
@@ -72,6 +44,13 @@ not(notgate,a);
 
 endmodule
 
+## OUTPUT:
+![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/e50a7f47-179d-4961-a8fa-0183d85bf1d5)
+
+Half Adder:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
+
 ## HALF ADDER:
 module HalfAdder(a,b,sum,carry);
 
@@ -84,6 +63,13 @@ xor (sum,a,b);
 and (carry,a,b);
 
 endmodule
+
+## HALF ADDER:
+![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/bdd078aa-42b1-4881-9edc-252d9a6a3594)
+
+Full adder:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/9bb3964c-438f-469d-a3de-c1cca6f323fb)
 
 ## FULL ADDER:
 module FA(a,b,cin,sum,cout);
@@ -106,6 +92,32 @@ or g5(cout,w2,w3);
 
 endmodule
 
+## FULL ADDER:
+![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/f66d79b0-9974-4079-b6cf-861f917b287a)
+Half Subtractor:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/731470b7-eb4e-49f8-8bb7-2994052a7184)
+
+## HALF SUBTRACTOR:
+module halfsubtractor(a,b,diff,borrow);
+
+input a,b;
+
+output diff,borrow;
+
+xor g1(diff,a,b);
+
+and g2(borrow,~a,b);
+
+endmodule
+
+## HALF SUBTRACTOR:
+![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/bb7f36b3-73f8-43ea-b38c-bb6e4a2eb85e
+
+Full Subtractor:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/d66f874b-c1f2-44b3-a035-7149b56430c1)
+
 ## FULL SUBTRACTOR:
 module full_sub(a,b,bin,diff,borrow);
 
@@ -126,19 +138,13 @@ or g4(borrow,w2,w3);
 and g5(w3,~w1,bin);
 
 endmodule
+## FULL SUBTRACTOR:
+![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/490a65d3-975c-4776-a5b7-081080ec120e)
 
-## HALF SUBTRACTOR:
-module halfsubtractor(a,b,diff,borrow);
 
-input a,b;
+8 Bit Ripple Carry Adder
 
-output diff,borrow;
-
-xor g1(diff,a,b);
-
-and g2(borrow,~a,b);
-
-endmodule
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/7385a408-40a5-4203-8050-b72818622d79)
 
 ## 8 BIT RIPPLE CARRY ADDER:
 module fa(a,b,c,sum,carry);
@@ -180,17 +186,6 @@ fa fa7(a[6],b[6],c6,sum[6],c7);
 fa fa8(a[7],b[7],c7,sum[7],cout);
 
 endmodule
-
-## OUTPUT:
-![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/e50a7f47-179d-4961-a8fa-0183d85bf1d5)
-## HALF ADDER:
-![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/bdd078aa-42b1-4881-9edc-252d9a6a3594)
-## FULL ADDER:
-![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/f66d79b0-9974-4079-b6cf-861f917b287a)
-## HALF SUBTRACTOR:
-![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/bb7f36b3-73f8-43ea-b38c-bb6e4a2eb85e
-## FULL SUBTRACTOR:
-![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/490a65d3-975c-4776-a5b7-081080ec120e)
 ## 8 BIT RIPPLE CARRY ADDER:
 ![image](https://github.com/212221060203/VLSI-LAB-EXP-1/assets/166364913/700098c8-621d-458a-b009-66c7311907cf)
 ## RESULT:
